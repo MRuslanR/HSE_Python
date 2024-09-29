@@ -1,7 +1,7 @@
-'''
+"""
 https://leetcode.com/problems/decoded-string-at-index/description/
 
-'''
+"""
 
 
 class Solution(object):
@@ -21,4 +21,3 @@ class Solution(object):
                 if k == ind or k == 0:
                     return s[i]
                 ind -= 1
-

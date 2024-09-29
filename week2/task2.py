@@ -1,7 +1,7 @@
-'''
+"""
 https://leetcode.com/problems/text-justification/description/
 
-'''
+"""
 
 
 class Solution(object):
@@ -23,8 +23,16 @@ class Solution(object):
                     word_count += 1
                     cur_len += len(words[i])
                     i += 1
-                fill = (maxWidth - cur_len - word_count + 1) // (word_count - 1) if word_count > 1 else 0
-                dop_fill = (maxWidth - cur_len - word_count + 1) % (word_count - 1) if word_count > 1 else 0
+                fill = (
+                    (maxWidth - cur_len - word_count + 1) // (word_count - 1)
+                    if word_count > 1
+                    else 0
+                )
+                dop_fill = (
+                    (maxWidth - cur_len - word_count + 1) % (word_count - 1)
+                    if word_count > 1
+                    else 0
+                )
                 if i == n:
                     for k in range(j, n):
                         cur_string += words[k]
