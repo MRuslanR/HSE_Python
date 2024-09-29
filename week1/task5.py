@@ -1,6 +1,6 @@
-'''
+"""
 https://leetcode.com/problems/sort-characters-by-frequency/description/
-'''
+"""
 
 
 class Solution(object):
@@ -8,12 +8,12 @@ class Solution(object):
         d = dict()
         for i in s:
             if i in d:
-                d[i]+=1
+                d[i] += 1
             else:
-                d[i]=1
-        sorted_chars = sorted(d.keys(),key=lambda x: d[x])
+                d[i] = 1
+        sorted_chars = sorted(d.keys(), key=lambda x: d[x])
         sorted_chars = reversed(sorted_chars)
-        ans=""
+        ans = ""
         for i in sorted_chars:
-            ans+=i*d[i]
+            ans += i * d[i]
         return ans
